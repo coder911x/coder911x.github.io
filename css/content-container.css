@@ -1,0 +1,16 @@
+@import url(page-home.css);
+@import url(page-404.css);
+@import url(page-servers.css);
+
+.content-container {
+  box-sizing: border-box;
+  min-height: calc(100vh - 84px);
+  padding: 10px;
+  background: #3F3A0A;
+  border: 2px solid #2A2812;
+}
+
+.content-container.centeredContent {
+  display: flex;
+  align-items: center;
+}

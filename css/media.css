@@ -1,0 +1,17 @@
+/**** Медиа-запросы ****/
+@media (min-width: 1750px) {
+  .page-home .logo-container {
+    width: auto;
+  }
+}
+
+@media (max-width: 1000px) {
+  .page-home .logo-container {
+    width: auto;
+  }
+
+  .page-home p {
+    width: auto;
+    text-align: left;
+  }
+}

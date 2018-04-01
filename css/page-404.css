@@ -1,0 +1,24 @@
+/* Not Found 404 Page */
+.page-404 {
+  width: 100%;
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-404 span {
+  margin-bottom: 20px;
+  color: #ccc;
+  font-size: 2rem;
+}
+
+.page-404 a {
+  color: #fff;
+}
+
+.page-404 a:hover {
+  text-shadow: 0 0 15px #fff;
+  transform: scale(1.1);
+}

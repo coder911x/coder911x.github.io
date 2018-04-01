@@ -1,0 +1,73 @@
+/**** Таблица серверов ****/
+
+.table-wrapper {
+  box-sizing: border-box;
+  width: calc(100% - 240px);
+}
+
+.servers {
+  width: 100%; 
+  border-radius: 50px;
+  table-layout: fixed;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.servers a {
+  font-size: 14px;
+}
+
+.servers th {
+  padding: 10px;
+  border-bottom: 2px solid #bbb;
+  font-size: 16px;
+  font-weight: normal;
+  font-variant: small-caps;
+  text-align: left;
+}
+
+.servers td {
+  padding: 10px;
+  border-bottom: 1px solid #999;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.servers tr:last-of-type td {
+  border-bottom: none;
+}
+
+.servers td:nth-of-type(1),
+.servers th:nth-of-type(1) {
+  width: 70%;
+}
+
+.servers td:nth-of-type(2),
+.servers th:nth-of-type(2) {
+  width: 30%;
+}
+
+.servers td:nth-of-type(3),
+.servers th:nth-of-type(3) {
+  width: 60px;
+}
+
+.servers td:nth-of-type(4),
+.servers th:nth-of-type(4) {
+  width: 170px;
+  text-align: right;
+}
+
+.servers tr:first-of-type td {
+  padding-top: 10px;
+}
+
+.servers .name a,
+.servers td.name {
+  color: rgb(129, 223, 120);
+}
+
+.servers .name a:hover {
+  text-shadow: 0 0 25px rgb(129, 223, 120);
+}

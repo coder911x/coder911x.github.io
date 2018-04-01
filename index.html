@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Мониторинг игровых серверов</title>
+  <link rel="stylesheet" href="css/entry.css">
+</head>
+<body>
+ 
+  <div class="menu">
+    <a href="#home">Главная</a>
+    <a href="#Counter-Strike: Source">CSS</a>
+    <a href="#Counter-Strike 1.6">CS 1.6</a>
+    <a href="#Garry`s Mod">Garry's Mod</a>
+    <a href="#Half-Life 1 Deathmatch">HL1</a>
+    <a href="#Counter-Strike: Condition Zero">CS:CZ</a>
+    <a href="#Counter-Strike: Global Offensive">CS:GO</a>
+  </div>
+
+  <div class="content-container">
+    <div class="page-home hidden">
+      <p>Этот сайт посвящен мониторингу игровых серверов. Вы всегда можете в режиме реального времени отслеживать состояние нужного вам сервера, количество активных игроков и многое другое. Также данный сайт будут полезен, если вы всё ещё не нашли свой сервер, а поиграть хочется.</p>
+      <div class="logo-container">
+        <a href="#Counter-Strike: Source" class="logo css"></a>
+        <a href="#Counter-Strike 1.6" class="logo cs-1-6"></a>
+        <a href="#Garry`s Mod" class="logo gmod"></a>
+        <a href="#Half-Life 1 Deathmatch" class="logo hl1"></a>
+        <a href="#Counter-Strike: Condition Zero" class="logo cscz"></a>
+        <a href="#Counter-Strike: Global Offensive" class="logo csgo"></a>
+      </div>
+    </div>
+    <div class="page-servers hidden">
+      <div class="table-wrapper">
+        <table class="servers">
+          <thead class="servers-header">
+            <tr>
+              <th>Название сервера</th>
+              <th>Карта</th>
+              <th>Слоты</th>
+              <th>Сокет</th>
+            </tr>
+          </thead>
+          <tbody class="servers-list"></tbody>
+        </table>
+      </div>
+      <div class="aside">
+        <div class="panel filter">
+          <div class="panel-header">Фильтры</div>
+          <div class="panel-content">
+            <label>
+              <span>Название</span>
+              <input id="filter-name" type="text">
+            </label>
+            <label>
+              <span>Карта</span>
+              <input id="filter-map" type="text">
+            </label>
+            <label>
+              <span>Слоты</span>
+              <div class="double-field">
+                <input id="filter-slots-min" type="text"><span class="delimiter"></span><input id="filter-slots-max" type="text">
+              </div>
+            </label>
+            <label>
+              <span>Онлайн</span>
+              <div class="double-field">
+                <input id="filter-online-min" type="text"><span class="delimiter"></span><input id="filter-online-max" type="text">
+              </div>
+            </label>
+            <label>
+              <span>Адрес</span>
+              <input id="filter-address" type="text">
+            </label>
+            <label>
+              <span>Порт</span>
+              <input id="filter-port" type="text">
+            </label>
+            <label>
+              <input id="filter-no-bots" type="checkbox" id="filter-dont-show-filled">
+              <div></div>
+              <span class="checkbox-label">Без ботов</span>
+            </label>
+            <label>
+              <input id="filter-no-password" type="checkbox" id="filter-dont-show-filled">
+              <div></div>
+              <span class="checkbox-label">Без пароля</span>
+            </label>
+            <label>
+              <input id="filter-not-full" type="checkbox" id="filter-dont-show-filled">
+              <div></div>
+              <span class="checkbox-label">Не показыать заполненные сервера</span>
+            </label>
+            <div class="double-button flex">
+              <input id="filter-apply-button" type="button" value="Применить">
+              <input id="filter-reset-button" type="button" value="Сбросить">
+            </div>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="panel-header">Добавить свой сервер</div>
+          <div class="panel-content">
+            <label>
+              <input id="address-field" type="text" placeholder="Адрес">
+            </label>
+            <label>
+              <input id="port-field" type="text" placeholder="Порт">
+            </label>
+            <label>
+              <select id="game-select">
+                <option value="Counter-Strike: Source">CSS</option>
+                <option value="Counter-Strike 1.6">CS 1.6</option>
+                <option value="Garry`s Mod">Garry's Mod</option>
+                <option value="Half-Life 1 Deathmatch">HL1</option>
+                <option value="Counter-Strike: Condition Zero">CS:CZ</option>
+                <option value="Counter-Strike: Global Offensive">CS:GO</option>
+              </select>
+            </label>
+            <label>
+              <input id="add-server-button" type="button" value="Добавить">
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page-404 hidden">
+      <span id="message-404">Запрашиваемая страница не найдена!</span>
+      <a href="#home">Перейти на главную страницу</a>
+    </div>
+    <div class="page-server-info hidden" style="margin: 0 auto;">
+      <div style="font-size: 24px;font-variant: small-caps;">В разработке...</div>
+    </div>
+  </div>
+  <div class="footer">Ложкин Дмитрий, 2018</div>
+  
+  <script src="js/web-events-client.js"></script>
+  <script src="js/ExtendedDOM.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/monitorting-utils.js"></script>
+  <script src="js/namespace.js"></script>
+  <script src="js/router.js"></script>
+  <script src="js/server-communication.js"></script>
+  <script src="js/handlers.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+/**** Глобальные стили приложения ****/
+
+html {
+  min-height: 100vh;
+  background: #221F02;
+  font: 16px Roboto;
+  color: #ccc;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hidden {
+  display: none !important;
+}
+
+input,
+select {
+  box-sizing: border-box;
+  width: 100%;
+  
+  padding: 5px;
+
+  background: #222;
+  border: 1px solid #777;
+  border-radius: 5px;
+  outline: none;
+
+  font-size: 14px;
+  color: #ccc;
+}
+
+input[type="button"]:hover {
+  background: #2f2f2f;
+}
+
+input[type="button"]:active {
+  background: #111;
+}
+
+input[type="button"]:disabled {
+  color: #444;
+}
+
+input[type="button"]:disabled {
+  background: #222;
+}
+
+select {
+  background-image: url(../images/menu-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: calc(100% - 6px) center;
+  background-size: auto 40%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+}
+
+select::-ms-expand {
+  padding-top: 1px;
+  border: none;
+  background: #222;
+  color: #ccc;
+}
+
+input:-ms-input-placeholder {
+  color: rgb(117, 117, 117);
+}
+
+input:-moz-input-placeholder {
+  color: rgb(117, 117, 117);
+}
+
+input:-webkit-input-placeholder {
+  color: rgb(117, 117, 117);
+}
+
+label {
+  display: block;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox-label {
+  user-select: none;
+}
+
+input[type="checkbox"] + div {
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  
+  width: 15px;
+  height: 15px;
+
+  border: 1px solid #555;
+  background: #222;
+
+  vertical-align: middle;
+  user-select: none;
+}
+
+input[type="checkbox"] + div::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  bottom: 1px;
+  right: 1px;
+}
+
+input[type="checkbox"]:checked + div::before {
+  background: url(../images/check.svg) center center / 100%;
+}

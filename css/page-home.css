@@ -1,0 +1,63 @@
+/**** Главная страница сайта ****/
+
+.page-home {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20px;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  color: #ccc;
+
+  font-size: 1.1rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.page-home p {
+  width: 800px;
+  margin: 50px 0;
+}
+
+.page-home .logo-container {
+  width: 900px;
+}
+
+.page-home .logo {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  margin: 20px 60px;
+  background: no-repeat center / contain;
+}
+
+.page-home .logo:hover {
+  transform: scale(1.1);
+}
+
+.page-home .css {
+  background-image: url(../images/logo/css.png);
+}
+
+.page-home .cs-1-6 {
+  background-image: url(../images/logo/cs1.6.png);
+}
+
+.page-home .gmod {
+  background-image: url(../images/logo/gmod.jpg);
+}
+
+.page-home .hl1 {
+  background-image: url(../images/logo/hl1.jpeg);
+}
+
+.page-home .cscz {
+  background-image: url(../images/logo/cscz.png);
+}
+
+.page-home .csgo {
+  background-image: url(../images/logo/csgo.png);
+}

@@ -1,0 +1,61 @@
+/**** Боковая панелька с фильтрами и добавлением новых серверов ****/
+.aside {
+  box-sizing: border-box;
+  min-width: 220px;
+  max-width: 220px;
+  margin-left: 20px;
+}
+
+.panel {
+  padding: 20px;
+  margin-bottom: 10px;
+  background: rgba(0, 0, 0, .5);
+  border-radius: 5px;
+}
+
+.panel-header {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #777;
+  text-align: center;
+}
+
+.panel-content {
+  padding-top: 10px;
+  font-size: 14px;
+}
+
+.panel-content label {
+  margin-bottom: 7px;
+}
+
+.filter input {
+  margin-top: 3px;
+}
+
+.panel-content input[type="button"] {
+  margin-top: 5px;
+}
+
+.double-field input {
+  width: 80px;
+}
+
+.double-button input {
+  width: 85px;
+}
+
+.double-button {
+  display: flex;
+  justify-content: space-between;
+}
+
+.double-field .delimiter::before {
+  content: "-";
+  display: inline-block;
+  width: 20px;
+  text-align: center;
+}
+
+.panel-content .checkbox-label {
+  font-size: 12px;
+}

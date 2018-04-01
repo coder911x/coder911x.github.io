@@ -1,0 +1,26 @@
+/**** Меню (шапка) ****/
+
+.menu {
+  padding: 10px 0;
+
+  background: rgba(0, 0, 0, 0.65);
+
+  z-index: 100;
+}
+
+.menu a {
+  margin-left: 10px;
+}
+
+a {
+  transition: .3s;
+  color: #ddd;
+  font-size: 1.2rem;
+}
+
+.menu a:hover,
+.menu a.active {
+  color: #fff;
+  text-shadow: 0 0 15px #fff;
+  transform: scale(1.1);
+}
