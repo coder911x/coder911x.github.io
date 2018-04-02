@@ -2,7 +2,8 @@
 void function(ns) {
   var
     updateServersInfo = ns.updateServersInfo,
-    games = ns.games;
+    games = ns.games,
+    debug = mUtils.debug;
 
   function router() {
     if (!location.hash)
@@ -18,7 +19,7 @@ void function(ns) {
       views.show('home');
     } else if (route == 'server-info') {
       let query = utils.parseQueryString(utils.getQueryString());
-      console.log(query);
+      debug(query);
       if (!query.address || !query.port || !query.game) {
         views.show('404');
       } else {

@@ -20,7 +20,7 @@ void function() {
   }
 
   // Возвращает разметку ряда таблицы
-  function createRowMarkup(server) {
+  function createServerRowMarkup(server) {
     var hrefData = {
       address: server.ip,
       port: server.port,
@@ -37,14 +37,45 @@ void function() {
     '</tr>'
   }
 
+  // Возвращает разметку ряда таблицы
+  function createPlayerRowMarkup(player, isBot) {
+    if (isBot == undefined)
+      isBot = false;
+    return '<tr>' +
+      getTableDataMarkup(escape(player.name)) +
+      getTableDataMarkup(player.score) +
+      (isBot ? '' : getTableDataMarkup(Math.floor(player.time / 1))) +
+    '</tr>'
+  }
+
   window.mUtils = {
-    fillTable: function(servers) {
+    // Заполнить таблицу
+    fillTable: function(type, entities) {
       var markup = '';
-      servers.forEach(function(server) {
-        if (!server.online) return;
-        markup += createRowMarkup(server);
+      entities.forEach(function(entity) {
+        switch (type) {
+          case 'servers':
+            if (!entity.online) return;
+              markup += createServerRowMarkup(entity);
+            break;
+          case 'players':
+            markup += createPlayerRowMarkup(entity);
+            break;
+          case 'bots':
+            markup += createPlayerRowMarkup(entity, true);
+            break;
+        }
       });
-      $('.servers-list').html(markup);
+      $('.' + type + '-list').html(
+        !markup
+          ? '<div class="empty-table">Таблица пуста</div>'
+          : markup
+        );
+    },
+    // Отладочные логи
+    debug() {
+      if (DEBUG)
+        console.log.apply(this, arguments);
     }
   };
 }();

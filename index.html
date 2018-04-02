@@ -128,8 +128,37 @@
       <span id="message-404">Запрашиваемая страница не найдена!</span>
       <a href="#home">Перейти на главную страницу</a>
     </div>
-    <div class="page-server-info hidden" style="margin: 0 auto;">
-      <div style="font-size: 24px;font-variant: small-caps;">В разработке...</div>
+    <div class="page-server-info hidden">
+      <div class="info">
+        <div id="info-map">de_dust2</div>
+        <div id="gallery"></div>
+        <div class="header">Информация о сервере</div>
+        <div class="row">Название: <span id="info-name">Супер-сервер</span></div>
+        <div class="row">Адресс: <span id="info-address">127.0.0.1:27015</span></div>
+        <div class="row">Онлайн: <span id="info-online">24/32 (В том числе 2 бота)</span></div>
+        <div class="row">Состояние: <span id="info-status">online</span></div>
+        <div class="row">Последний раз данные были получены: <span id="info-last-update">21:52:40 ( 2 января 2018 )</span></div>
+        <div class="row">Пароль: <span id="info-password">нет</span></div>
+      </div>
+      <div class="players">
+        <table>
+          <caption>Игроки</caption>
+          <thead>
+            <th>Никнейм</th>
+            <th>Очки</th>
+            <th>Играет уже (секунд)</th>
+          </thead>
+          <tbody class="players-list"></tbody>
+        </table>
+        <table>
+          <caption>Боты</caption>
+          <thead>
+            <th>Никнейм</th>
+            <th>Очки</th>
+          </thead>
+          <tbody class="bots-list"></tbody>
+        </table>
+      </div>
     </div>
   </div>
   <div class="footer">Ложкин Дмитрий, 2018</div>

@@ -35,7 +35,7 @@ void function(ns) {
     checkboxes.forEach(function(checkbox) {
       $('#filter-' + checkbox).prop('checked', false);
     });
-    mUtils.fillTable(ns.servers);
+    mUtils.fillTable('servers', ns.servers);
   });
 
   // Применение фильтров
@@ -48,9 +48,8 @@ void function(ns) {
     checkboxes.forEach(function(checkbox) {
       filter[checkbox] = $('#filter-' + checkbox).prop('checked');
     });
-    if (DEBUG)
-      console.log(filter);
-    mUtils.fillTable(
+    mUtils.debug(filter);
+    mUtils.fillTable('servers',
       ns.servers.filter(function(server) {
         var online = server.online
           ? server.players + server.bots.length

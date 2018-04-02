@@ -1,0 +1,9 @@
+.page-server-info {
+  margin: 0 auto;
+  display: flex;
+}
+
+#gallery {
+  height: 200px;
+  background: url(../images/test-map-image.jpg) no-repeat center / cover;
+}
