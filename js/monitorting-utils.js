@@ -12,7 +12,7 @@ void function() {
 
   // Возвращает разметку одной ячейки таблицы
   function getTableDataMarkup(content, customClass, href) {
-    return '<td ' + attr('class', customClass) + ' ' + attr('title', content) + '>' +
+    return '<td ' + attr('class', customClass) + '>' +
         (href ? '<a href="#server-info' + utils.serializeQueryString(href) + '">' : '')
           + content + 
         (href ? '</a>' : '') +
@@ -33,7 +33,7 @@ void function() {
         (server.players + server.bots.length) + '/' + server.maxPlayers,
         'slots'
       ) +
-      getTableDataMarkup(escape(server.ip + ':' + server.port), 'scoket') +
+      getTableDataMarkup(escape(server.ip + ':' + server.port), 'socket') +
     '</tr>'
   }
 

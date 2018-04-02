@@ -60,7 +60,7 @@ void function(ns) {
           server.name.indexOf(filter.name) > -1 &&
           server.map.indexOf(filter.map) > -1 &&
           server.ip.indexOf(filter.address) > -1 &&
-          server.port.indexOf(filter.port) > -1 &&
+          server.port.toString().indexOf(filter.port) > -1 &&
           (!filter['slots-min'].length || +filter['slots-min'] <= server.maxPlayers) &&
           (!filter['slots-max'].length || +filter['slots-max'] >= server.maxPlayers) &&
           (!filter['online-min'].length || +filter['online-min'] <= online) &&
