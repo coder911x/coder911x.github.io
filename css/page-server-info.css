@@ -1,9 +1,59 @@
 .page-server-info {
-  margin: 0 auto;
+  /* max-width: 1400px; */
+  margin: 30px auto;
   display: flex;
+  color: #bbb;
 }
 
 #gallery {
   height: 200px;
+  margin-bottom: 15px;
   background: url(../images/test-map-image.jpg) no-repeat center / cover;
+}
+
+.page-server-info .info {
+  flex: 1 1 auto;
+}
+
+.page-server-info .players {
+  display: flex;
+  flex-flow: column nowrap;
+  margin-left: 20px;
+  flex: 0 0 auto;
+}
+
+.page-server-info .players th,
+.page-server-info .players td {
+  text-align: center;
+}
+
+.header, 
+#info-map { /* From table caption */
+  padding: 5px;
+  background: rgba(0, 0, 0, .5);
+  border-radius: 5px;
+  color: rgb(234, 190, 140);
+  font-size: 18px;
+}
+
+#info-map {
+  text-align: center;
+}
+
+#info-name,
+#info-address,
+#info-online,
+#info-status,
+#info-last-update,
+#info-password {
+  color: #eee;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.bots {
+  margin-top: 20px;
 }

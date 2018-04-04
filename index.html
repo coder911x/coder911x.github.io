@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="css/entry.css">
 </head>
 <body>
- 
   <div class="menu">
     <a href="#home">Главная</a>
     <a href="#Counter-Strike: Source">CSS</a>
@@ -130,31 +129,55 @@
     </div>
     <div class="page-server-info hidden">
       <div class="info">
-        <div id="info-map">de_dust2</div>
+        <div id="info-map">...</div>
         <div id="gallery"></div>
-        <div class="header">Информация о сервере</div>
-        <div class="row">Название: <span id="info-name">Супер-сервер</span></div>
-        <div class="row">Адресс: <span id="info-address">127.0.0.1:27015</span></div>
-        <div class="row">Онлайн: <span id="info-online">24/32 (В том числе 2 бота)</span></div>
-        <div class="row">Состояние: <span id="info-status">online</span></div>
-        <div class="row">Последний раз данные были получены: <span id="info-last-update">21:52:40 ( 2 января 2018 )</span></div>
-        <div class="row">Пароль: <span id="info-password">нет</span></div>
+        <table class="Информация о сервере">
+          <caption>Информация о сервере</caption>
+          <tr>
+            <td>Название</td>
+            <td id="info-name">...</td>
+          </tr>
+          <tr>
+            <td>Адрес</td>
+            <td id="info-address">...</td>
+          </tr>
+          <tr>
+            <td>Онлайн</td>
+            <td id="info-online">...</td>
+          </tr>
+          <tr>
+            <td>Состояние</td>
+            <td id="info-status">...</td>
+          </tr>
+          <tr>
+            <td>Последнее обновление</td>
+            <td id="info-last-update">...</td>
+          </tr>
+          <tr>
+            <td>Пароль</td>
+            <td id="info-password">...</td>
+          </tr>
+        </table>
       </div>
       <div class="players">
         <table>
           <caption>Игроки</caption>
           <thead>
-            <th>Никнейм</th>
-            <th>Очки</th>
-            <th>Играет уже (секунд)</th>
+            <tr>
+              <th>Никнейм</th>
+              <th>Очки</th>
+              <th>Играет уже</th>
+            </tr>
           </thead>
           <tbody class="players-list"></tbody>
         </table>
-        <table>
+        <table class="bots">
           <caption>Боты</caption>
           <thead>
-            <th>Никнейм</th>
-            <th>Очки</th>
+            <tr>
+              <th>Никнейм</th>
+              <th>Очки</th>
+            </tr>
           </thead>
           <tbody class="bots-list"></tbody>
         </table>

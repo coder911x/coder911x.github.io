@@ -1,5 +1,5 @@
 /**** Точка входа для стилей ****/
-@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url(../fonts/Roboto/Roboto.css);
 @import url(normalize.css);
 @import url(app.css);
 

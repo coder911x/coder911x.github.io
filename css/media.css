@@ -1,17 +1,55 @@
 /**** Медиа-запросы ****/
-@media (min-width: 1750px) {
+@media (max-width: 1150px) {
   .page-home .logo-container {
-    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .page-home .logo {
+    margin-bottom: 30px;
+    flex-basis: 190px;
   }
 }
 
-@media (max-width: 1000px) {
-  .page-home .logo-container {
-    width: auto;
+@media (max-width: 700px) {
+  .page-home .logo {
+    flex-basis: auto;
+  }
+}
+
+@media (max-width: 520px) {
+  .menu {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .menu a {
+    padding: 5px 0;
+    border-bottom: 1px solid #555;
+  }
+
+  .menu a:last-child {
+    border-bottom: 0;
+  }
+
+  .page-404 {
+    display: block;
+    margin: 20px 0;
+  }
+
+  .page-404 #message-404 {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .page-home {
+    display: block;
   }
 
   .page-home p {
-    width: auto;
-    text-align: left;
+    margin: 0;
+    margin-bottom: 20px;
   }
 }

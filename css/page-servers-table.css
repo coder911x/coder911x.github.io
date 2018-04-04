@@ -6,41 +6,11 @@
 }
 
 .servers {
-  width: 100%; 
-  border-radius: 50px;
-  table-layout: fixed;
-  border-collapse: collapse;
-  font-size: 14px;
+  width: 100%;
 }
 
 .servers a {
   font-size: 14px;
-}
-
-.servers tr {
-  transition: .3s;
-}
-
-.servers th {
-  padding: 10px;
-  border-bottom: 2px solid #bbb;
-  font-size: 16px;
-  font-weight: normal;
-  font-variant: small-caps;
-  text-align: left;
-  color: rgb(204, 190, 140);
-}
-
-.servers td {
-  padding: 10px;
-  border-bottom: 1px solid #999;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.servers tr:last-of-type td {
-  border-bottom: none;
 }
 
 .servers td:nth-of-type(1),
@@ -70,10 +40,6 @@
 
 td:nth-of-type(2n + 1) {
   color: #bbb;
-}
-
-.servers tbody tr:hover {
-  background: rgba(0, 0, 0, .25);
 }
 
 .servers tr:hover .name a {

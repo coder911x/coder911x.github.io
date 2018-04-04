@@ -27,9 +27,9 @@ void function(ns) {
       if (!server.online) {
         
       } else {
-        $('#info-map').text(escape(server.map));
-        $('#info-name').text(escape(server.name));
-        $('#info-address').text(escape(server.ip + ':' + server.port));
+        $('#info-map').text(server.map);
+        $('#info-name').text(server.name);
+        $('#info-address').text(server.ip + ':' + server.port);
         $('#info-online').text(
           (server.players + server.bots.length) + '/' + server.maxPlayers +
           ' (в том числе ' + server.bots.length + ' ботов)'
