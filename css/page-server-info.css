@@ -1,25 +1,38 @@
 .page-server-info {
-  /* max-width: 1400px; */
-  margin: 30px auto;
+  max-width: 720px;
+  margin: 0 auto;
   display: flex;
   color: #bbb;
+  flex-wrap: wrap;
+}
+
+.players-header th {
+  width: 33.3%;
+}
+
+.bots-header th {
+  width: 50%;
+}
+
+.page-server-info .info,
+.page-server-info .players {
+  flex: 1 1 auto;
 }
 
 #gallery {
   height: 200px;
   margin-bottom: 15px;
   background: url(../images/test-map-image.jpg) no-repeat center / cover;
-}
-
-.page-server-info .info {
-  flex: 1 1 auto;
-}
+} 
 
 .page-server-info .players {
   display: flex;
   flex-flow: column nowrap;
-  margin-left: 20px;
-  flex: 0 0 auto;
+  margin: 0 10px;
+}
+
+.server-info {
+  margin-bottom: 10px;
 }
 
 .page-server-info .players th,
@@ -46,7 +59,7 @@
 #info-status,
 #info-last-update,
 #info-password {
-  color: #eee;
+  color: #ddd;
 }
 
 .info {

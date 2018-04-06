@@ -42,6 +42,22 @@ ExtendedDOM.prototype.addClass = function(name) {
   return this;
 };
 
+// Переключает у всех элементов выборки класс
+ExtendedDOM.prototype.toggleClass = function(name) {
+  Array.prototype.forEach.call(this.elements, function(element) {
+    element.classList.toggle(name);
+  });
+  return this;
+};
+
+// Определяет имеет ли первый элемент выборки класс с указанным именем
+ExtendedDOM.prototype.hasClass = function(name) {
+  return this.elements[0] === undefined
+    ? undefined
+    : this.elements[0].classList.contains(name);
+  return this;
+};
+
 /*
   Функция установки всем элементам выборки внутренней разметки,
   если передаётся 1 параметр. Если же аргументов нет, то возвращается
@@ -103,7 +119,7 @@ ExtendedDOM.prototype.value = function(data) {
 */
 ExtendedDOM.prototype.val = function(data) {
   var ret = this.value(data);
-  return ret == undefined
+  return ret === undefined
     ? undefined
     : ret == this
       ? this
@@ -116,7 +132,7 @@ ExtendedDOM.prototype.val = function(data) {
   value первого элемента выборки, если таковой имеется
 */
 ExtendedDOM.prototype.prop = function(name, value) {
-  if (value == undefined)
+  if (value === undefined)
     return this.elements[0]
       ? this.elements[0][name]
       : undefined;
@@ -124,4 +140,13 @@ ExtendedDOM.prototype.prop = function(name, value) {
     element[name] = value;
   });
   return this;
+};
+
+/*
+  Функция аналогичная value, однако к её результату применяется trim()
+*/
+ExtendedDOM.prototype.width = function() {
+  return this.elements[0] === undefined
+    ? undefined
+    : this.elements[0].clientWidth
 };

@@ -70,4 +70,10 @@ void function(ns) {
       })
     );
   });
+
+  // Боковые панельки для маленького экрана (скрывающиеся)
+  $('.panel').click(function(ev) {
+    if (document.body.clientWidth <= 800 && $(ev.target).hasClass('panel-header'))
+      $(this).toggleClass('collapsed');
+  });
 }(monitoringNamespace);

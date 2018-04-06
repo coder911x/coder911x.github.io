@@ -12,13 +12,112 @@
   }
 }
 
+@media (max-width: 850px) {
+  .page-home {
+    padding: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .page-servers {
+    flex-direction: column;
+  }
+
+  .table-wrapper {
+    width: 100%;
+  }
+
+  .aside {
+    order: -1;
+    max-width: none;
+    margin: 0;
+  }
+
+  .aside .panel {
+    flex-grow: 1;
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+
+  /* aside-mini */
+  .panel .panel-header {
+    padding-bottom: 10px;
+  }
+
+  .panel.add-server {
+    margin-bottom: 10px;
+  }
+
+  .panel .panel-header::before {
+    content: "";
+    display: inline-block;
+
+    width: 15px;
+    height: 15px;
+    
+    margin-right: 10px;
+  }
+
+  .panel {
+    padding: 0;
+  }
+
+  .panel:not(.collapsed) {
+    padding: 10px;
+  }
+
+  .panel.collapsed:hover {
+    background: rgba(0, 0, 0, 0.4);
+  }
+
+  .panel.collapsed .panel-header {
+    padding: 10px;
+    border-bottom: 0;
+  }
+
+  .panel.collapsed .panel-header::before {
+    transform: rotate(-90deg);
+    background: url(../images/menu-arrow.svg) no-repeat center 2px / 100%;
+  }
+
+  .panel.collapsed .panel-content {
+    display: none;
+  }
+
+  .panel:not(.collapsed) .panel-header::before {
+    background: url(../images/menu-arrow.svg) no-repeat center 2px / 100%;
+  }
+}
+
 @media (max-width: 700px) {
   .page-home .logo {
     flex-basis: auto;
   }
+
+  .servers td:nth-of-type(3), 
+  .servers th:nth-of-type(3) {
+    padding-right: 0;
+  }
+
+  .servers td:nth-of-type(4), 
+  .servers th:nth-of-type(4) {
+    width: 145px;
+  }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 600px) {
+  .servers th:nth-of-type(4){
+    display: none;
+  }
+}
+
+@media (max-width: 565px) {
+  .page-home .logo-container {
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 570px) {
   .menu {
     display: flex;
     flex-direction: column;
@@ -51,5 +150,25 @@
   .page-home p {
     margin: 0;
     margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .servers th:nth-of-type(1),
+  .servers th:nth-of-type(2),
+  .servers td:nth-of-type(1),
+  .servers td:nth-of-type(2) {
+    width: 50%;
+    text-align: center;
+  }
+
+  .servers th:nth-of-type(3) {
+    display: none;
+  }
+}
+
+@media (max-width: 450px) {
+  .page-home p {
+    text-align: left;
   }
 }

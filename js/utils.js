@@ -84,6 +84,11 @@ var utils = {
     }
     result[key] = decodeURIComponent(value);
     return result;
+  },
+  // Возвращает время, прошедшее с time
+  getAgoTime: function(time) {
+    var timePassed = Math.floor((Date.now() - time) / 1000);
+    return timePassed + ' сек.';
   }
 };
 

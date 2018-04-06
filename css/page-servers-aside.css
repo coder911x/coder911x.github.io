@@ -17,6 +17,7 @@
   padding-bottom: 5px;
   border-bottom: 1px solid #777;
   text-align: center;
+  user-select: none;
 }
 
 .panel-content {

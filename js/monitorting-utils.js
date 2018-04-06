@@ -76,6 +76,10 @@ void function() {
     debug: function() {
       if (DEBUG)
         console.log.apply(this, arguments);
+    },
+    // Функция сортировки по убыванию очков
+    sortScoreDESC: function(a, b) {
+      return b.score - a.score;
     }
   };
 }();

@@ -45,7 +45,7 @@
         </table>
       </div>
       <div class="aside">
-        <div class="panel filter">
+        <div class="panel filter collapsed">
           <div class="panel-header">Фильтры</div>
           <div class="panel-content">
             <label>
@@ -97,7 +97,7 @@
             </div>
           </div>
         </div>
-        <div class="panel">
+        <div class="panel add-server collapsed">
           <div class="panel-header">Добавить свой сервер</div>
           <div class="panel-content">
             <label>
@@ -131,7 +131,7 @@
       <div class="info">
         <div id="info-map">...</div>
         <div id="gallery"></div>
-        <table class="Информация о сервере">
+        <table class="server-info">
           <caption>Информация о сервере</caption>
           <tr>
             <td>Название</td>
@@ -151,7 +151,7 @@
           </tr>
           <tr>
             <td>Последнее обновление</td>
-            <td id="info-last-update">...</td>
+            <td id="info-last-update"><span id="info-last-update-date">...</span> (<span id="info-last-update-time">... сек.</span> назад)</td>
           </tr>
           <tr>
             <td>Пароль</td>
@@ -162,7 +162,7 @@
       <div class="players">
         <table>
           <caption>Игроки</caption>
-          <thead>
+          <thead class="players-header">
             <tr>
               <th>Никнейм</th>
               <th>Очки</th>
@@ -173,7 +173,7 @@
         </table>
         <table class="bots">
           <caption>Боты</caption>
-          <thead>
+          <thead class="bots-header">
             <tr>
               <th>Никнейм</th>
               <th>Очки</th>
@@ -194,5 +194,6 @@
   <script src="js/router.js"></script>
   <script src="js/server-communication.js"></script>
   <script src="js/handlers.js"></script>
+  <script src="js/timers.js"></script>
 </body>
 </html>

@@ -9,6 +9,12 @@
   width: 100%;
 }
 
+.servers td {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 .servers a {
   font-size: 14px;
 }

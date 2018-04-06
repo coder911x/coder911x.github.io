@@ -121,6 +121,7 @@ table {
   width: 100%;
   border-collapse: collapse;
   font-size: 14px;
+  table-layout: fixed;
 }
 
 tr {
@@ -140,9 +141,7 @@ th {
 td {
   padding: 10px;
   border-bottom: 1px solid #999;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
+  word-wrap: break-word;
 }
 
 tr:last-of-type td {
@@ -159,4 +158,8 @@ table caption {
   border-radius: 5px;
   color: rgb(234, 190, 140);
   font-size: 18px;
+}
+
+.empty-table {
+  text-align: center;
 }

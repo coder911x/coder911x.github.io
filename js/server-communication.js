@@ -24,9 +24,10 @@ void function(ns) {
     },
     recieveServerInfo: function(server, players) {
       debug(server, players);
-      if (!server.online) {
-        
-      } else {
+      if (server.online) {
+        ns.server = server;
+        players.sort(mUtils.sortScoreDESC);
+        server.bots.sort(mUtils.sortScoreDESC);
         $('#info-map').text(server.map);
         $('#info-name').text(server.name);
         $('#info-address').text(server.ip + ':' + server.port);
@@ -35,7 +36,8 @@ void function(ns) {
           ' (в том числе ' + server.bots.length + ' ботов)'
         );
         $('#info-status').text('online');
-        $('#info-last-update').text(new Date(server.lastUpdate).toLocaleString() + ' (' + Math.floor((Date.now() - server.lastUpdate) / 1000) + ' секунд назад)');
+        $('#info-last-update-date').text(new Date(server.lastUpdate).toLocaleString());
+        $('#info-last-update-time').text(utils.getAgoTime(server.lastUpdate));
         $('#info-password').text(
           server.password
             ? 'да'
@@ -43,7 +45,18 @@ void function(ns) {
         );
         mUtils.fillTable('players', players);
         mUtils.fillTable('bots', server.bots);
+        return;
       }
+      $('#info-map').text('-');
+      $('#info-name').text(server.name);
+      $('#info-address').text(server.ip + ':' + server.port);
+      $('#info-online').text('- / -');
+      $('#info-status').text('offline');
+      $('#info-last-update-date').text(new Date(server.lastUpdate).toLocaleString());
+      $('#info-last-update-time').text(utils.getAgoTime(server.lastUpdate));
+      $('#info-password').text('-');
+      mUtils.fillTable('players', []);
+      mUtils.fillTable('bots', []);
     },
     error: function(message) {
       $('#add-server-button').prop('disabled', false);

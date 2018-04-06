@@ -11,6 +11,7 @@ void function(ns) {
 
     var route = utils.getHash();
     
+    ns.server = null;
     $('.menu a').removeClass('active');
     $('.menu a[href="#' + route + '"]').addClass('active');
     $('#message-404').text('Запрашиваемая страница не найдена!');
