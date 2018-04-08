@@ -23,6 +23,10 @@ void function(ns) {
       mUtils.fillTable('servers', servers);
     },
     recieveServerInfo: function(server, players) {
+      let dt = Date.now() - server.lastUpdate;
+      if (dt < 0) {
+        server.lastUpdate += dt;
+      }
       debug(server, players);
       if (server.online) {
         if (!ns.server) {
@@ -54,6 +58,7 @@ void function(ns) {
         mUtils.fillTable('bots', server.bots);
         return;
       }
+      ns.server = server;
       $('#gallery')
           .css('background-image', 'url(images/gallery/offline.png)')
           .attr('game', '');

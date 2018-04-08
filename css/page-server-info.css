@@ -20,7 +20,6 @@
 }
 
 #gallery {
-  padding: 0 30px;
   transition: .5s;
   position: relative;
   max-width: 720px;
@@ -34,18 +33,37 @@
 }
 
 #gallery .arrow {
+  display: flex;
+  align-items: center;
   transition: .5s;
   width: 30px;
   position: absolute;
   top: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+}
+
+#gallery:hover .arrow {
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, .7);
+}
+
+#gallery:hover .arrow-left {
+  height: 30px;
+  width: 100px;
+  transform: rotate(90deg);
+  background: url(../images/menu-arrow.svg) no-repeat center center / 100% 100%;
+}
+
+#gallery:hover .arrow-right {
+  height: 30px;
+  width: 100px;
+  transform: rotate(-90deg);
+  background: url(../images/menu-arrow.svg) no-repeat center center / 100% 100%;
 }
 
 #gallery .arrow.next:hover,
 #gallery .arrow.prev:hover {
   cursor: pointer;
-  box-shadow: 0 0 15px 5px #111;
 }
 
 #gallery .next {
