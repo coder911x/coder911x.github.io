@@ -1,0 +1,6 @@
+/* Тут собраны хаки для IE */
+@media screen and (min-width:0\0) {  
+  table {
+    table-layout: auto;
+  }
+}

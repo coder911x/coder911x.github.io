@@ -1,5 +1,5 @@
 // Флаг режима отладки
-var DEBUG = false;
+var DEBUG = true;
 
 var monitoringNamespace = {
   // URL-адрес сервера

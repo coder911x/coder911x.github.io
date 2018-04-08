@@ -87,7 +87,7 @@ void function(ns) {
       return;
     number = number < 6 ? +number + 1 : 1;
     $gallery
-      .css('background-image', `url(images/gallery/${game}/${number}.jpg)`)
+      .css('background-image', 'url(images/gallery/' + game + '/' + number + '.jpg)')
       .attr('number', number);
   });
 
@@ -102,7 +102,7 @@ void function(ns) {
 
     number = number > 1 ? +number - 1 : 6;
     $gallery
-      .css('background-image', `url(images/gallery/${game}/${number}.jpg)`)
+      .css('background-image', 'url(images/gallery/' + game + '/' + number + '.jpg)')
       .attr('number', number);
   });
 

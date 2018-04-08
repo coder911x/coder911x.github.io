@@ -28,7 +28,7 @@ void function(ns) {
         if (!ns.server) {
           let number = 1 + Math.floor(Math.random() * 6);
           $('#gallery')
-            .css('background-image', `url(images/gallery/${server.shortGameName}/${number}.jpg)`)
+            .css('background-image', 'url(images/gallery/' + server.shortGameName + '/' + number + '.jpg)')
             .attr('game', server.shortGameName)
             .attr('number', number);
         }
@@ -55,7 +55,7 @@ void function(ns) {
         return;
       }
       $('#gallery')
-          .css('background-image', `url(images/gallery/offline.png)`)
+          .css('background-image', 'url(images/gallery/offline.png)')
           .attr('game', '');
       $('#info-map').text('-');
       $('#info-name').text('-');
@@ -86,5 +86,16 @@ void function(ns) {
   router();
   // Обрабатываем изменение машрута
   window.onhashchange = router;
+
+  (function() {
+    // Кешируем изображения для галереи
+    ['cs16', 'cscz', 'csgo', 'css', 'garrysmod', 'hldm'].forEach(function(game) {
+      
+      for (let i = 1; i <= 6; i++) {
+        new Image().src = 'images/gallery/' + game + '/' + i + '.jpg';
+      }
+    });
+    new Image().src = 'images/gallery/offline.png';
+  })();
   
 }(monitoringNamespace);
