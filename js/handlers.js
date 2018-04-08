@@ -76,4 +76,41 @@ void function(ns) {
     if (document.body.clientWidth <= 800 && $(ev.target).hasClass('panel-header'))
       $(this).toggleClass('collapsed');
   });
+
+  // Стрелка вперед галереи изображений
+  $('#gallery .next').click(function() {
+    let
+      $gallery = $('#gallery'),
+      game = $gallery.attr('game'),
+      number = $gallery.attr('number');
+    if (!game)
+      return;
+    number = number < 6 ? +number + 1 : 1;
+    $gallery
+      .css('background-image', `url(images/gallery/${game}/${number}.jpg)`)
+      .attr('number', number);
+  });
+
+  // Стрелка назад галереи изображений
+  $('#gallery .prev').click(function() {
+    let
+      $gallery = $('#gallery'),
+      game = $gallery.attr('game'),
+      number = $gallery.attr('number');
+    if (!game)
+      return;
+
+    number = number > 1 ? +number - 1 : 6;
+    $gallery
+      .css('background-image', `url(images/gallery/${game}/${number}.jpg)`)
+      .attr('number', number);
+  });
+
+  // Скрыть/Показать меню для маленьких экранов
+  $('.menu').click(function(ev) {
+    let target = ev.target;
+    if (target == this) {
+      $(this).toggleClass('collapsed');
+    }
+  });
 }(monitoringNamespace);

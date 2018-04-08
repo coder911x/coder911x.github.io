@@ -109,6 +109,17 @@
   .servers th:nth-of-type(4){
     display: none;
   }
+
+  #gallery {
+    display: none;
+  }
+
+  #info-map {
+    padding-top: 0;
+    margin-right: 10px;
+    text-align: right;
+    background: transparent;
+  }
 }
 
 @media (max-width: 565px) {
@@ -118,6 +129,22 @@
 }
 
 @media (max-width: 570px) {
+  .menu.collapsed a {
+    display: none;
+  }
+
+  .menu.menu.collapsed::before {
+    content: "Меню";
+    margin-bottom: 0;
+  }
+
+  .menu::before {
+    content: "Свернуть";
+    text-align: right;
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+
   .menu {
     display: flex;
     flex-direction: column;

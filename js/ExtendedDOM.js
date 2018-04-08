@@ -143,7 +143,42 @@ ExtendedDOM.prototype.prop = function(name, value) {
 };
 
 /*
-  Функция аналогичная value, однако к её результату применяется trim()
+  Функция установки всем элементам выборки инлайнового стиля name со
+  значением value, если передаётся 1 параметр. 
+  Если же аргументов нет, то возвращается значение указанного стиля
+  первого элемента выборки, если таковой имеется
+*/
+ExtendedDOM.prototype.css = function(name, value) {
+  if (value === undefined)
+    return this.elements[0]
+      ? this.elements[0].style[name]
+      : undefined;
+  Array.prototype.forEach.call(this.elements, function(element) {
+    element.style[name] = value;
+  });
+  return this;
+};
+
+/*
+  Функция установки всем элементам выборки атрибута name со
+  значением value, если передаётся 1 параметр. 
+  Если же аргументов нет, то возвращается значение указанного атрибута
+  первого элемента выборки, если таковой имеется
+*/
+ExtendedDOM.prototype.attr = function(name, value) {
+  if (value === undefined)
+    return this.elements[0]
+      ? this.elements[0].getAttribute(name)
+      : undefined;
+  Array.prototype.forEach.call(this.elements, function(element) {
+    element.setAttribute(name, value);
+  });
+  return this;
+};
+
+
+/*
+  Возвращает ширину первого элемента выборки
 */
 ExtendedDOM.prototype.width = function() {
   return this.elements[0] === undefined

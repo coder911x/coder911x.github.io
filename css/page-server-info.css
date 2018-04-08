@@ -20,10 +20,41 @@
 }
 
 #gallery {
-  height: 200px;
-  margin-bottom: 15px;
-  background: url(../images/test-map-image.jpg) no-repeat center / cover;
+  padding: 0 30px;
+  transition: .5s;
+  position: relative;
+  max-width: 720px;
+  overflow: hidden;
+  height: 400px;
+  background: url(../images/gallery/offline.png) no-repeat center / cover content-box rgba(0, 0, 0, .4);
 } 
+
+#gallery + table > caption {
+  border-radius: 0 0 5px 5px;
+}
+
+#gallery .arrow {
+  transition: .5s;
+  width: 30px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#gallery .arrow.next:hover,
+#gallery .arrow.prev:hover {
+  cursor: pointer;
+  box-shadow: 0 0 15px 5px #111;
+}
+
+#gallery .next {
+  right: 0;
+}
+
+#gallery .prev {
+  left: 0;
+}
 
 .page-server-info .players {
   display: flex;
@@ -41,10 +72,10 @@
 }
 
 .header, 
-#info-map { /* From table caption */
+#info-map {
   padding: 5px;
   background: rgba(0, 0, 0, .5);
-  border-radius: 5px;
+  border-radius: 5px 5px 0 0;
   color: rgb(234, 190, 140);
   font-size: 18px;
 }

@@ -25,6 +25,13 @@ void function(ns) {
     recieveServerInfo: function(server, players) {
       debug(server, players);
       if (server.online) {
+        if (!ns.server) {
+          let number = 1 + Math.floor(Math.random() * 6);
+          $('#gallery')
+            .css('background-image', `url(images/gallery/${server.shortGameName}/${number}.jpg)`)
+            .attr('game', server.shortGameName)
+            .attr('number', number);
+        }
         ns.server = server;
         players.sort(mUtils.sortScoreDESC);
         server.bots.sort(mUtils.sortScoreDESC);
@@ -47,8 +54,11 @@ void function(ns) {
         mUtils.fillTable('bots', server.bots);
         return;
       }
+      $('#gallery')
+          .css('background-image', `url(images/gallery/offline.png)`)
+          .attr('game', '');
       $('#info-map').text('-');
-      $('#info-name').text(server.name);
+      $('#info-name').text('-');
       $('#info-address').text(server.ip + ':' + server.port);
       $('#info-online').text('- / -');
       $('#info-status').text('offline');
