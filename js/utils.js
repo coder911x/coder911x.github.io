@@ -93,7 +93,7 @@ var utils = {
   },
 
   // Принимает время в секундах, возвращает "Xч. Yмин. Zсек."
-  toTimeFormat: function(time) {debugger;
+  toTimeFormat: function(time) {
     var sec, min, h;
     sec = Math.floor(time % 60);
     time = Math.floor(time / 60);
