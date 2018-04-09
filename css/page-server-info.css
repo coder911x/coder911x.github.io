@@ -14,11 +14,6 @@
   width: 50%;
 }
 
-.page-server-info .info,
-.page-server-info .players {
-  flex: 1 1 auto;
-}
-
 #gallery {
   transition: .5s;
   position: relative;
@@ -75,8 +70,6 @@
 }
 
 .page-server-info .players {
-  display: flex;
-  flex-flow: column nowrap;
   margin: 0 10px;
 }
 
@@ -109,11 +102,6 @@
 #info-last-update,
 #info-password {
   color: #ddd;
-}
-
-.info {
-  display: flex;
-  flex-direction: column;
 }
 
 .bots {

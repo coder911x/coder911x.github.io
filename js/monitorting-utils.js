@@ -44,7 +44,7 @@ void function() {
     return '<tr>' +
       getTableDataMarkup(escape(player.name)) +
       getTableDataMarkup(player.score) +
-      (isBot ? '' : getTableDataMarkup(Math.floor(player.time))) +
+      (isBot ? '' : getTableDataMarkup(utils.toTimeFormat(player.time))) +
     '</tr>'
   }
 

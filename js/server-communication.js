@@ -92,15 +92,12 @@ void function(ns) {
   // Обрабатываем изменение машрута
   window.onhashchange = router;
 
-  (function() {
-    // Кешируем изображения для галереи
-    ['cs16', 'cscz', 'csgo', 'css', 'garrysmod', 'hldm'].forEach(function(game) {
-      
-      for (let i = 1; i <= 6; i++) {
-        new Image().src = 'images/gallery/' + game + '/' + i + '.jpg';
-      }
-    });
-    new Image().src = 'images/gallery/offline.png';
-  })();
+  // Кешируем изображения для галереи
+  ['cs16', 'cscz', 'csgo', 'css', 'garrysmod', 'hldm'].forEach(function(game) {
+    for (let i = 1; i <= 6; i++) {
+      new Image().src = 'images/gallery/' + game + '/' + i + '.jpg';
+    }
+  });
+  new Image().src = 'images/gallery/offline.png';
   
 }(monitoringNamespace);

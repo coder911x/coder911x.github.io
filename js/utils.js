@@ -85,10 +85,22 @@ var utils = {
     result[key] = decodeURIComponent(value);
     return result;
   },
+  
   // Возвращает время, прошедшее с time
   getAgoTime: function(time) {
     var timePassed = Math.floor((Date.now() - time) / 1000);
     return timePassed + ' сек.';
+  },
+
+  // Принимает время в секундах, возвращает "Xч. Yмин. Zсек."
+  toTimeFormat: function(time) {debugger;
+    var sec, min, h;
+    sec = Math.floor(time % 60);
+    time = Math.floor(time / 60);
+    min = time % 60;
+    h = Math.floor(time / 60);
+    return (h > 0 ? h + 'ч. ' : '') +
+      (min > 0 ? min + 'мин. ' : '') + sec + 'сек.';
   }
 };
 

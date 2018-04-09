@@ -67,7 +67,7 @@
   }
 
   .panel.collapsed:hover {
-    background: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
   }
 
   .panel.collapsed .panel-header {
@@ -128,12 +128,6 @@
   }
 }
 
-@media (max-width: 565px) {
-  .page-home .logo-container {
-    justify-content: space-around;
-  }
-}
-
 @media (max-width: 570px) {
   .menu.collapsed a {
     display: none;
@@ -183,6 +177,12 @@
   .page-home p {
     margin: 0;
     margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 565px) {
+  .page-home .logo-container {
+    justify-content: space-around;
   }
 }
 
